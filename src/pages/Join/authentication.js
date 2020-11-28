@@ -32,7 +32,7 @@ async function makeAuthenticatedRequest(url = "") {
     referrerPolicy: "no-referrer",
   });
 
-  return JSON.stringify(response);
+  return response.json();
 }
 
 export const checkToken = () => {

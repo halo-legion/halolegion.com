@@ -12,7 +12,7 @@ export default function Join({ history }) {
   
   useEffect(() => {
     if(loginStatus) {
-      history.push('/');
+      history.push('/dashboard');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loginStatus])
@@ -23,7 +23,6 @@ export default function Join({ history }) {
       email: res.profileObj.email,
       avatar: res.profileObj.imageUrl,
     }).then((res) => {
-      console.log(res);
       if (!res.success) {
         toast.error("❌Oops! We weren't able to sign you in.");
       } else {
