@@ -50,7 +50,9 @@ export const fetchUserDetails = async () => {
     "https://halolegion.herokuapp.com/user"
   );
   if (data.error) {
-    throw new Error(data.error);
+    return {
+      error: "Please login again..."
+    }
   } else {
     return {
       success: true,

@@ -98,7 +98,7 @@ export default function Philosophy() {
             </h1>
             <div className="philosophy__cards my-8">
               {philosophyData.map((philosophyCard) => (
-                <Card data={philosophyCard} />
+                <Card data={philosophyCard} key={philosophyCard.name} />
               ))}
             </div>
           </div>

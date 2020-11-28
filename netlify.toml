@@ -1,11 +1,11 @@
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
-
-[[redirects]]
 from = "/prompts"
 to = "https://docs.google.com/document/d/1VoyGlCfsD3-HIhsonZPdpCz1Fbk2MGbJ6PfUo9y5Y0w/edit"
 status = 301
 force = true
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
 

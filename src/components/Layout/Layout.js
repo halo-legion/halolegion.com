@@ -10,7 +10,6 @@ export default function Layout({
   title,
   auth = false,
   authFallback = "/join",
-  loading = false,
   children,
 }) {
   const [loginStatus, setLoginStatus] = useSharedState(loggedIn);
@@ -23,24 +22,19 @@ export default function Layout({
     if (checkToken()) {
       setLoginStatus(true);
     }
-  }, [setLoginStatus]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
-      {loading ? (
-        <div>loading...</div>
+      {/* Fallback Redirect */}
+      {auth && !loginStatus ? (
+        <Redirect to={authFallback} />
       ) : (
         <>
-          {/* Fallback Redirect */}
-          {auth && !loginStatus ? (
-            <Redirect to={authFallback} />
-          ) : (
-            <>
-              <Navbar />
-              {children}
-              <Footer />
-            </>
-          )}
+          <Navbar />
+          {children}
+          <Footer />
         </>
       )}
     </>
