@@ -11,9 +11,8 @@ import {
 import { ToastContainer } from "react-toastify";
 import "./styles/app.css";
 import "./styles/custom.css";
-import Loading from './components/Loading/Loading';
+import Loading from "./components/Loading/Loading";
 import "react-toastify/dist/ReactToastify.css";
-
 
 function App() {
   return (
