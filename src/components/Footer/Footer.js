@@ -3,8 +3,11 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { links } from "../links";
 import SofaSVG from "./SofaSVG";
+import { useSharedStateValue } from "../../statedrive/index";
+import { loggedIn } from "../../statedrive/atoms";
 
 export default function Footer() {
+  const loginStatus = useSharedStateValue(loggedIn);
   return (
     <div>
       <footer className="text-gray-700 body-font">
@@ -29,7 +32,8 @@ export default function Footer() {
                     >
                       {window.location.pathname === link.src ? (
                         <>
-                          {">"}{link.name}
+                          {">"}
+                          {link.name}
                         </>
                       ) : (
                         <>{link.name}</>
@@ -37,6 +41,41 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
+                {loginStatus ? (
+                  <li className="my-2" key="dashboard">
+                    <Link
+                      className="mr-5 lowercase text-primary hover:text-primaryIndigo"
+                      smooth
+                      to="/dashboard"
+                    >
+                      {window.location.pathname === "/dashboard" ? (
+                        <>
+                          {">"}
+                          dashboard
+                        </>
+                      ) : (
+                        <>dashboard</>
+                      )}
+                    </Link>
+                  </li>
+                ) : (
+                  <li className="my-2" key="join">
+                    <Link
+                      className="mr-5 lowercase text-primary hover:text-primaryIndigo"
+                      smooth
+                      to="/join"
+                    >
+                      {window.location.pathname === "/join" ? (
+                        <>
+                          {">"}
+                          join
+                        </>
+                      ) : (
+                        <>join</>
+                      )}
+                    </Link>
+                  </li>
+                )}
               </nav>
             </div>
           </div>

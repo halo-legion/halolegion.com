@@ -8,10 +8,6 @@ export const links = [
     src: "/philosophy",
   },
   {
-    name: "Join",
-    src: "/join",
-  },
-  {
     name: "Contact",
     src: "/contact",
   },

@@ -1,5 +1,5 @@
-import { HashLink as Link } from "react-router-hash-link";
 import React, { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import { links } from "../links";
 import { loggedIn } from "../../statedrive/atoms";
 import { useSharedState } from "../../statedrive/index";
@@ -53,14 +53,25 @@ export default function Navbar() {
                   key="dashboard"
                 >
                   {window.location.pathname === "/dashboard" ? (
-                    <>
-                      {">"} dashboard
-                    </>
+                    <>{">"} dashboard</>
                   ) : (
                     <>dashboard</>
                   )}
                 </Link>
-              ) : null}
+              ) : (
+                <Link
+                  className="mr-5 lowercase hover:text-primary"
+                  smooth
+                  to="/join"
+                  key="join"
+                >
+                  {window.location.pathname === "/join" ? (
+                    <>{">"} join</>
+                  ) : (
+                    <>join</>
+                  )}
+                </Link>
+              )}
             </nav>
             {loginStatus ? (
               <GoogleLogout
