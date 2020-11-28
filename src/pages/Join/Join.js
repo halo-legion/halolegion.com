@@ -25,20 +25,20 @@ export default function Join({ history }) {
     }).then((res) => {
       console.log(res);
       if (!res.success) {
-        toast.error("Oops! We weren't able to sign you in.");
+        toast.error("❌Oops! We weren't able to sign you in.");
       } else {
         setUserInfo(res.data);
         setLoginStatus(true);
       }
     });
 
-    toast.dark("🦄 Logging in...");
+    toast.dark("✅ Logging in...");
   };
   const handleError = (res) => {
     if (res.type === "tokenFailed") {
-      return toast.error("🤐 Oops! You need a DPS Indore email to signup :(");
+      return toast.error("❌ Oops! You need a DPS Indore email to signup :(");
     }
-    toast.error("🤐 Oops! Something weird happened...");
+    toast.error("❌ Oops! Something weird happened...");
     console.log(res);
   };
 

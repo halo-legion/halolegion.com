@@ -16,7 +16,7 @@ export default function Navbar() {
     logout();
     setLoginStatus(false);
     setRedirect("/join");
-    toast.dark("Logged out successfully...");
+    toast.dark("✅ Logged out successfully...");
   };
 
   return (
