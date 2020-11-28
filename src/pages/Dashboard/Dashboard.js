@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 // imports
 import { Layout } from "../../components/exports";
+// eslint-disable-next-line
 import { toast } from "react-toastify";
 import { user as userAtom } from "../../statedrive/atoms";
 import { useSharedState } from "../../statedrive/index";
