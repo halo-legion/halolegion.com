@@ -4,7 +4,8 @@ import React from "react";
 import { Layout } from "../../components/exports";
 import Parallax from "react-rellax";
 import { philosophyData } from "./data";
-import Card from './Card';
+import Card from "./Card";
+import { Link } from "react-router-dom";
 
 export default function Philosophy() {
   return (
@@ -20,7 +21,9 @@ export default function Philosophy() {
                 Our philosophy is what makes us a legion.
               </h1>
               <div className="flex justify-center my-24">
-                <button className="button-pink">think you can help?</button>
+                <Link to="/join">
+                  <button className="button-pink">think you can help?</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -103,8 +106,12 @@ export default function Philosophy() {
       </section>
       <section className="hero__quote-block bg-primary p-32">
         <div className="flex justify-center align-center flex-col">
-                <h1 className="text-center font-vg5000 text-4xl text-white">~ Kutteshna kutteshna kutteshna kutteshna kutteshna kutteshna. ~</h1>
-                <p className="text-white text-center text-white font-vg5000 text-2xl pt-6">~ Utkarsh the son of God</p>
+          <h1 className="text-center font-vg5000 text-4xl text-white">
+            ~ Kutteshna kutteshna kutteshna kutteshna kutteshna kutteshna. ~
+          </h1>
+          <p className="text-white text-center text-white font-vg5000 text-2xl pt-6">
+            ~ Utkarsh the son of God
+          </p>
         </div>
       </section>
     </Layout>

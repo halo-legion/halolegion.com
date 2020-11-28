@@ -3,6 +3,7 @@ import React from "react";
 // imports
 import { Layout, Team } from "../../components/exports";
 import Parallax from "react-rellax";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -56,7 +57,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex justify-center">
-                <button className="button-pink">get in</button>
+                <Link to="/join">
+                  <button className="button-pink">get in</button>
+                </Link>
               </div>
             </div>
           </div>

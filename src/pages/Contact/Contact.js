@@ -4,6 +4,7 @@ import React from "react";
 import { Layout } from "../../components/exports";
 import Parallax from "react-rellax";
 import { contactList } from "./data";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
   return (
@@ -19,7 +20,9 @@ export default function Contact() {
                 Interested in talking? Contact us here.
               </h1>
               <div className="flex justify-center my-24">
-                <button className="button-pink">or help us hehe</button>
+                <Link to="/join">
+                  <button className="button-pink">or help us hehe</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -117,7 +120,10 @@ export default function Contact() {
             <div className="mt-5">
               <h2 className="text-primary font-vg5000 text-3xl">Phone:</h2>
               {contactList.map((contact) => (
-                <div className="contact__person font-vg5000 text-primaryIndigo text-2xl py-2" key={contact.name}>
+                <div
+                  className="contact__person font-vg5000 text-primaryIndigo text-2xl py-2"
+                  key={contact.name}
+                >
                   <h4 className="contact__person_name">
                     {contact.name} ({contact.designation})
                   </h4>
