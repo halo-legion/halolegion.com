@@ -20,3 +20,20 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+.privacy__policy strong {
+  @apply text-xl;
+  @apply font-inter;
+  @apply text-primary;
+  @apply my-4;
+}
+
+.terms-and-conditions p {
+  @apply p-4;
+  @apply font-display;
+}
+
+.terms-and-conditions ul {
+  @apply m-4;
+  @apply text-primary;
+}

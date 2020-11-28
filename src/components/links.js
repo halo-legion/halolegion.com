@@ -18,5 +18,5 @@ export const links = [
   {
     name: "Team",
     src: "/#team",
-  }
+  },
 ];
