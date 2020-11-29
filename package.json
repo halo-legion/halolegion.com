@@ -24,7 +24,7 @@
     "build": "npm run build:css & react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "set NODE_ENV=production&&postcss src/styles/tailwind.css -o src/styles/app.css",
+    "build:css": "cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/app.css & echo $NODE_ENV",
     "watch:css": "postcss src/styles/tailwind.css -o src/styles/app.css",
     "watch:nodemon": "nodemon --watch src/styles/tailwind.css --exec \"npm run build:css \""
   },
@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9",
+    "cross-env": "^7.0.2",
     "nodemon": "^2.0.6",
     "postcss-cli": "^8.3.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
