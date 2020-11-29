@@ -1,11 +1,20 @@
 import React, { useState } from "react";
+import { selectedEvents as selectedEventsState } from "../../statedrive/atoms";
+import { useSharedState } from "../../statedrive/index";
 
 export default function Card(props) {
   const [active, setActive] = useState(props.isActive || false);
+  const [selectedEvents, setSelectedEvents] = useSharedState(selectedEventsState);
+
   return (
     <div
       onClick={() => {
         setActive(!active);
+        if(!active) {
+          setSelectedEvents([...selectedEvents, props.name]);
+        } else {
+          setSelectedEvents(selectedEvents.filter(event => event !== props.name));
+        }
       }}
       className="flex-grow"
     >

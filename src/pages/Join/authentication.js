@@ -17,6 +17,29 @@ async function makeRequest(
   return response.json();
 }
 
+export async function updateEvents(selectedEvents) {
+  const token = JSON.parse(localStorage.getItem("token"));
+
+  const response = await fetch(
+    "https://halolegion.herokuapp.com/inductions/register",
+    {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token.token,
+      },
+      redirect: "follow",
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify({ events: selectedEvents }),
+    }
+  );
+
+  return response.json();
+}
+
 async function makeAuthenticatedRequest(url = "") {
   const token = JSON.parse(localStorage.getItem("token"));
   const response = await fetch(url, {
@@ -51,8 +74,8 @@ export const fetchUserDetails = async () => {
   );
   if (data.error) {
     return {
-      error: "Please login again..."
-    }
+      error: "Please login again...",
+    };
   } else {
     return {
       success: true,

@@ -4,4 +4,4 @@ export const loggedIn = createState({initialValue: false});
 
 export const user = createState({initialValue: null});
 
-export const selectedEvents = createState({initialValue: null});
+export const selectedEvents = createState({initialValue: []});

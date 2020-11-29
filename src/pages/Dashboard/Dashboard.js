@@ -3,9 +3,13 @@ import React, { useState, useEffect } from "react";
 // imports
 import { Layout } from "../../components/exports";
 import { toast } from "react-toastify";
-import { user as userAtom, loggedIn } from "../../statedrive/atoms";
+import {
+  user as userAtom,
+  loggedIn,
+  selectedEvents as selectedEventsState,
+} from "../../statedrive/atoms";
 import { useSharedState, useSetSharedState } from "../../statedrive/index";
-import { fetchUserDetails, logout } from "../Join/authentication";
+import { fetchUserDetails, updateEvents, logout } from "../Join/authentication";
 import Loading from "../../components/Loading/Loading";
 import Card from "./Card";
 import { Redirect } from "react-router-dom";
@@ -13,6 +17,9 @@ import { Redirect } from "react-router-dom";
 export default function Dashboard() {
   const [user, setUser] = useSharedState(userAtom);
   const setLoggedIn = useSetSharedState(loggedIn);
+  const [selectedEvents, setSelectedEvents] = useSharedState(
+    selectedEventsState
+  );
   const [redirect, setRedirect] = useState(null);
 
   const events = [
@@ -32,10 +39,21 @@ export default function Dashboard() {
         toast.error(userDetails.error);
         return setRedirect("/join");
       }
+      setSelectedEvents(userDetails.data.user.events);
       setUser(userDetails.data.user);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const handleEventsUpdate = async () => {
+    updateEvents(selectedEvents).then((res) => {
+      if (res.error) {
+        toast.error(res.error);
+      }
+      toast.dark("✅ Events updated successfully...");
+    });
+  };
+
   return (
     <>
       {redirect ? (
@@ -76,19 +94,50 @@ export default function Dashboard() {
                     <div className="container flex justify-center items-center flex-col">
                       <div className="flex m-4 flex-wrap justify-center items-center">
                         {events.map((event) => (
-                          <Card name={event} key={event} />
+                          <Card
+                            name={event}
+                            key={event}
+                            isActive={selectedEvents.includes(event)}
+                          />
                         ))}
                       </div>
-                      <button className="button-pink">update</button>
+                      <button
+                        className="button-pink"
+                        onClick={handleEventsUpdate}
+                      >
+                        update
+                      </button>
                     </div>
                   </div>
                 </div>
               </section>
-              <section className="hero__prelimlink-block bg-primary p-16">
+              <section className="flex justify-center p-20">
+                <div className="text-primaryIndigo font-vg5000 w-3/4">
+                  <h1 className="text-5xl">Instructions:</h1>
+                  <ul className="text-primary my-5 text-2xl">
+                    <li className="py-2">
+                      * Just click on the boxes and you should be good to go.
+                      We'll contact you for more information on email or
+                      personally.
+                    </li>
+                    <li className="py-2">
+                      * If you're facing any troubles with the platform, feel
+                      free to contact us and we'd be happy to help.
+                    </li>
+                    <li className="py-2">
+                      * Information about the prompts is available here.
+                    </li>
+                    <li className="py-2">* Have fun.</li>
+                  </ul>
+                </div>
+              </section>
+              <section className="hero__prelimlink-block bg-primary w-full p-16">
                 <div className="flex justify-center align-center flex-col">
-                  <h1 className="text-center font-vg5000 text-2xl text-white">
-                    Click here to view preliminary prompts
-                  </h1>
+                  <a href="https://utkarsh.co/halo-prompts" rel="noreferrer" target="_blank">
+                    <h1 className="text-center font-vg5000 text-2xl text-white">
+                      Click here to view preliminary prompts
+                    </h1>
+                  </a>
                 </div>
               </section>
             </Layout>
