@@ -46,17 +46,7 @@ This year just two things PETE CONRAD and being gaming head, Team Halo.`,
   {
     name: "Amogh Sabarwal",
     designation: "Head Design",
-    description: `Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the
-        industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has
-        survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged.
-        It was popularised in the 1960s with the release of
-        Letraset sheets containing Lorem Ipsum passages, and
-        more recently with desktop publishing software like
-        Aldus PageMaker including versions of Lorem Ipsum.`,
+    description: `I’m a creative and talented Graphic Designer with extensive experience in design. I’ve worked in Indore since 2012 and specialize in creating unique graphics to boost your brand, as well as visual media that will help set you apart from your competition.With a commitment to my clients and an extensive skill set, which I am always developing, I always strive to exceed expectations. Contact me to find out how I can create a design with high visual impact to generate the results you want.`,
     image: "https://dummyimage.com/400x400",
     socials: {
       instagram: "https://www.instagram.com/deadzolt/",
