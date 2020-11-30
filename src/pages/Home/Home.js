@@ -42,15 +42,13 @@ export default function Home() {
             </div>
             <div className="text-center lg:w-2/3 w-full">
               <h1
-                className="w-128 sm:text-5xl mb-4 font-black text-primaryIndigo font-inter"
-                style={{ fontSize: 90 }}
+                className="text-2xl mb-4 font-black text-primaryIndigo font-inter"
               >
                 Don't do it alone, do it with a legion, Halo.
               </h1>
               <div className="flex justify-center">
                 <p
-                  className="my-6 break-words leading-relaxed text-lg font-medium font-display"
-                  style={{ width: "35rem" }}
+                  className="my-8 md:w-1/2 break-words leading-relaxed text-lg font-medium font-display"
                 >
                   Halo is the official technology club of DPS Indore. Besides
                   that, we just hang around and try putting things together.

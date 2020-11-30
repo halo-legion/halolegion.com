@@ -11,6 +11,10 @@
   @apply py-2 px-8 bg-gradient-to-r from-secondary-light to-secondary-medium text-white rounded-lg shadow-xl hover:shadow-2xl font-bold font-vg5000 focus:outline-none focus:ring-pink-600 focus:ring-opacity-75;
 }
 
+.button-block {
+  width: 100%;
+}
+
 .button-pink:hover {
   transform: translateY(-6px);
   animation-name: hover;
