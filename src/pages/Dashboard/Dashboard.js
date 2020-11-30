@@ -67,19 +67,15 @@ export default function Dashboard() {
               <section className="hero__bg">
                 <div className="container mx-auto flex px-5 pt-24 items-center justify-center flex-col">
                   <div className="text-center lg:w-2/3 w-full">
-                    <h1
-                      className="w-128 sm:text-5xl mb-4 font-black text-primaryIndigo font-inter"
-                      style={{ fontSize: 90 }}
-                    >
+                    <h1 className="text-4xl sm:text-8xl mb-4 font-black text-primaryIndigo font-inter">
                       Hi, <span className="text-primary">{user.name}</span>.
                     </h1>
                     <div className="container px-5 mx-auto my-12">
                       <div className="lg:w-4/5 mx-auto flex flex-wrap justify-center">
-                        <h1 className="hero__content-block--title font-vg5000 text-center">
+                        <h1 className="sm:text-5xl text-2xl font-vg5000 text-center">
                           Select events you are
                           <span className="bg-yellow-300 px-1 m-1">
-                            {" "}
-                            interested{" "}
+                            interested
                           </span>
                           in:
                         </h1>
@@ -111,10 +107,10 @@ export default function Dashboard() {
                   </div>
                 </div>
               </section>
-              <section className="flex justify-center p-20">
+              <section className="flex justify-center sm:p-20">
                 <div className="text-primaryIndigo font-vg5000 w-3/4">
                   <h1 className="text-5xl">Instructions:</h1>
-                  <ul className="text-primary my-5 text-2xl">
+                  <ul className="text-primary my-5 text-xl sm:text-2xl">
                     <li className="py-2">
                       * Just click on the boxes and you should be good to go.
                       We'll contact you for more information on email or
@@ -133,7 +129,11 @@ export default function Dashboard() {
               </section>
               <section className="hero__prelimlink-block bg-primary w-full p-16">
                 <div className="flex justify-center align-center flex-col">
-                  <a href="https://utkarsh.co/halo-prompts" rel="noreferrer" target="_blank">
+                  <a
+                    href="https://utkarsh.co/halo-prompts"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     <h1 className="text-center font-vg5000 text-2xl text-white">
                       Click here to view preliminary prompts
                     </h1>

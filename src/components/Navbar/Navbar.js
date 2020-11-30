@@ -20,6 +20,11 @@ export default function Navbar() {
     toast.dark("✅ Logged out successfully...");
   };
 
+  const handleError = (res) => {
+    toast.error("❌ Oops! Something weird happened...");
+    console.log(res);
+  }
+
   return (
     <>
       {redirect ? <Redirect to={redirect} /> : null}
@@ -116,9 +121,9 @@ export default function Navbar() {
                 aria-hidden="true"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
@@ -132,15 +137,15 @@ export default function Navbar() {
                 aria-hidden="true"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
             </button>
             <div
-              class={`sm:hidden p-6 m-6 shadow-2xl rounded-xl ${
+              className={`sm:hidden p-6 m-6 shadow-2xl rounded-xl ${
                 mobileToggle ? "" : "hidden"
               }`}
             >
@@ -148,7 +153,7 @@ export default function Navbar() {
                 {links.map((link) => (
                   <Link
                     to={link.src}
-                    class={`block lowercase p-3 rounded-md text-base font-vg5000 hover:text-white hover:bg-primary ${
+                    className={`block lowercase p-3 rounded-md text-base font-vg5000 hover:text-white hover:bg-primary ${
                       window.location.pathname === link.src
                         ? "bg-primary text-white"
                         : "text-primary border-2 border-primary"
@@ -164,7 +169,7 @@ export default function Navbar() {
                     smooth
                     to="/dashboard"
                     key="dashboard"
-                    class={`block lowercase p-3 rounded-md text-base font-vg5000 hover:text-white hover:bg-primary ${
+                    className={`block lowercase p-3 rounded-md text-base font-vg5000 hover:text-white hover:bg-primary ${
                       window.location.pathname === "/dashboard"
                         ? "bg-primary text-white"
                         : "text-primary border-2 border-primary"
@@ -174,7 +179,7 @@ export default function Navbar() {
                   </Link>
                 ) : (
                   <Link
-                    class={`block lowercase p-3 rounded-md text-base font-vg5000 hover:text-white hover:bg-primary ${
+                    className={`block lowercase p-3 rounded-md text-base font-vg5000 hover:text-white hover:bg-primary ${
                       window.location.pathname === "/join"
                         ? "bg-primary text-white"
                         : "text-primary border-2 border-primary"
@@ -201,6 +206,7 @@ export default function Navbar() {
                       </button>
                     )}
                     onLogoutSuccess={handleLogout}
+                    onFail={handleError}
                   />
                 ) : (
                   <Link to="/join" className="button-pink button-block">

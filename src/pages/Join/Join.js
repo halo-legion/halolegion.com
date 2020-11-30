@@ -90,6 +90,7 @@ export default function Join() {
                     onFailure={handleError}
                     hostedDomain={"student.dpsindore.org"} // ?
                     cookiePolicy={"single_host_origin"}
+                    isSignedIn={true}
                   />
                 </div>
               </div>
