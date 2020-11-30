@@ -6,7 +6,7 @@ export const contactList = [
     },
     {
         "name": "Udeshna Srimal",
-        "designation": "PR Head",
+        "designation": "Editor",
         "phone": "+91 9893740521"
     },
     {
