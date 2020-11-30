@@ -45,7 +45,7 @@ export default function Home() {
                 className="w-128 sm:text-5xl mb-4 font-black text-primaryIndigo font-inter"
                 style={{ fontSize: 90 }}
               >
-                Don't do alone, do it with a legion, Halo.
+                Don't do it alone, do it with a legion, Halo.
               </h1>
               <div className="flex justify-center">
                 <p
@@ -53,7 +53,7 @@ export default function Home() {
                   style={{ width: "35rem" }}
                 >
                   Halo is the official technology club of DPS Indore. Besides
-                  that, we just hang around and try putting shit together.
+                  that, we just hang around and try putting things together.
                 </p>
               </div>
               <div className="flex justify-center">
