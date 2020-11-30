@@ -17,16 +17,14 @@ export default function Footer() {
               Don't do it alone, do it with a legion, Halo.
             </p>
           </div>
-          <div
-            className="sm:flex-grow sm:flex sm:flex-wrap font-vg5000 md:pl-20 -mb-10 md:mt-0 mt-2 md:text-left text-center"
-          >
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="sm:flex-grow sm:flex sm:flex-wrap font-vg5000 md:pl-20 -mb-10 md:mt-0 mt-2 md:text-left text-center">
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <nav className="list-none mb-10">
                 {links.map((link) => (
                   <li className="my-2" key={link.name}>
                     <Link
                       className="mr-5 lowercase text-primary hover:text-primaryIndigo"
-                    smooth
+                      smooth
                       to={link.src}
                     >
                       {window.location.pathname === link.src ? (
@@ -93,6 +91,15 @@ export default function Footer() {
               target="_blank"
             >
               Utkarsh
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://ashutosh.netlify.app"
+              rel="noreferrer"
+              className="text-primary"
+              target="_blank"
+            >
+              Ashutosh
             </a>
             .
           </span>
