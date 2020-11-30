@@ -51,10 +51,9 @@ export default function Join() {
         <Layout>
           <section id="hero__join" className="hero__bg">
             <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-              <div className="text-center lg:w-2/3 w-full">
+              <div className="lg:w-2/3 w-full">
                 <h1
-                  className="w-128 sm:text-5xl mb-4 font-black text-primaryIndigo font-inter"
-                  style={{ fontSize: 90 }}
+                  className="text-5xl text-left sm:text-center sm:text-8xl mb-4 font-black text-primaryIndigo font-inter"
                 >
                   Think you're a great fit? We too.
                 </h1>

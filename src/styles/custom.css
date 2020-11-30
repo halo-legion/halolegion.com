@@ -1,9 +1,4 @@
-.footer-heading {
-  font-style: "Inter", sans-serif;
-  font-weight: bolder;
-  font-size: 38px;
-  color: #0c053f;
-}
+
 
 /* .hero__bg {
   background-color: transparent;
@@ -37,19 +32,15 @@
   animation: hue 15s infinite linear;
 }
 
-.hero__content-block--title {
-  font-size: 3rem;
-}
+
 
 .register__card--graybox {
   background: #f3f4f6;
   position: absolute;
   z-index: -4;
-  width: 60%;
 }
 .register__card--pinkbox {
   background-image: linear-gradient(120deg, #ec4899 0%, #f43f5e 100%);
-  width: 80%;
   transform: rotate(-3deg);
 }
 .register__card__content {

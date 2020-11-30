@@ -34,7 +34,7 @@ export default function Team() {
     <div className="w-full">
       <div className="px-5 py-2 mx-auto flex justify-center">
         <button
-          className="px-12 py-4 bg-white font-vg5000 text-4xl mx-2 focus:outline-none hover:bg-primary hover:text-white border-2 border-white"
+          className="sm:px-12 sm:py-4 px-8 py-1 bg-white font-vg5000 text-4xl mx-2 focus:outline-none hover:bg-primary hover:text-white border-2 border-white"
           onClick={() => {
             nextSlide();
           }}
@@ -42,7 +42,7 @@ export default function Team() {
           {"<"}
         </button>
         <button
-          className="px-12 py-4 bg-white font-vg5000 text-4xl mx-2 focus:outline-none hover:bg-primary hover:text-white border-2 border-white"
+          className="sm:px-12 sm:py-4 px-8 py-1 bg-white font-vg5000 text-4xl mx-2 focus:outline-none hover:bg-primary hover:text-white border-2 border-white"
           onClick={() => {
             previousSlide();
           }}
@@ -50,24 +50,29 @@ export default function Team() {
           {">"}
         </button>
       </div>
-      <div className="team__carousel__frame px-5 mx-auto">
-        <div className="team__carousel__frame--outline bg-red h-screen w-screen"></div>
-        <div className="team__carousel__frame--main bg-white h-screen">
+      <div className="team__carousel__frame px-5 py-2 mx-auto flex justify-center">
+        <div className="hidden sm:contents">
+          <div className="team__carousel__frame--outline h-screen w-screen"></div>
+        </div>
+
+        <div className="bg-white h-auto sm:h-screen w-screen px-8 sm:transform sm:translate-x-5 sm:translate-y-5">
           <div>
-            <div className="container px-5 py-24 mx-auto">
+            <div className="w-full sm:px-10 sm:py-24 mx-8 pr-8 my-10">
               <div className="lg:w-4/5 mx-auto flex flex-wrap">
-                <div className="w-3/6 lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+                <div className="sm:w-3/6 lg:pr-10 lg:py-6 mb-6 lg:mb-0">
                   <div className="team__carousel__frame--main__content">
                     <div className="team__carousel__frame--main__content--title font-vg5000">
-                      <h1 className="text-6xl py-4">{teamMember.name}</h1>
-                      <span className="text-primary text-xl">
+                      <h1 className="sm:text-6xl text-3xl py-4">
+                        {teamMember.name}
+                      </h1>
+                      <span className="text-primary sm:text-xl">
                         ~ {teamMember.designation}
                       </span>
                     </div>
-                    <div className="text-display team__carousel__frame--main__content--description py-8">
+                    <div className="sm:text-display text-sm team__carousel__frame--main__content--description py-2 sm:py-8">
                       <p>{teamMember.description}</p>
                     </div>
-                    <div className="text-display team__carousel__frame--main__content--socials flex">
+                    <div className="text-display team__carousel__frame--main__content--socials -ml-2 flex">
                       {teamMember.socials.twitter ? (
                         <a href={teamMember.socials.twitter}>
                           <svg
@@ -86,9 +91,7 @@ export default function Team() {
                             />
                           </svg>
                         </a>
-                      ) : (
-                        ""
-                      )}
+                      ) : null}
                       {teamMember.socials.linkedin ? (
                         <a href={teamMember.socials.linkedin}>
                           <svg
@@ -107,9 +110,25 @@ export default function Team() {
                             />
                           </svg>
                         </a>
-                      ) : (
-                        ""
-                      )}
+                      ) : null}
+                      {teamMember.socials.instagram ? (
+                        <a href={teamMember.socials.instagram}>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="31.518"
+                            height="31.51"
+                            viewBox="0 0 31.518 31.51"
+                          >
+                            <path
+                              id="Icon_awesome-instagram"
+                              data-name="Icon awesome-instagram"
+                              d="M15.757,9.914a8.079,8.079,0,1,0,8.079,8.079A8.066,8.066,0,0,0,15.757,9.914Zm0,13.331a5.252,5.252,0,1,1,5.252-5.252,5.262,5.262,0,0,1-5.252,5.252ZM26.051,9.584A1.884,1.884,0,1,1,24.166,7.7,1.88,1.88,0,0,1,26.051,9.584ZM31.4,11.5a9.325,9.325,0,0,0-2.545-6.6,9.387,9.387,0,0,0-6.6-2.545c-2.6-.148-10.4-.148-13,0a9.373,9.373,0,0,0-6.6,2.538,9.356,9.356,0,0,0-2.545,6.6c-.148,2.6-.148,10.4,0,13a9.325,9.325,0,0,0,2.545,6.6,9.4,9.4,0,0,0,6.6,2.545c2.6.148,10.4.148,13,0a9.325,9.325,0,0,0,6.6-2.545,9.387,9.387,0,0,0,2.545-6.6c.148-2.6.148-10.392,0-12.994ZM28.041,27.281a5.318,5.318,0,0,1-3,3c-2.074.823-7,.633-9.288.633s-7.221.183-9.288-.633a5.318,5.318,0,0,1-3-3c-.823-2.074-.633-7-.633-9.288s-.183-7.221.633-9.288a5.318,5.318,0,0,1,3-3c2.074-.823,7-.633,9.288-.633s7.221-.183,9.288.633a5.318,5.318,0,0,1,3,3c.823,2.074.633,7,.633,9.288S28.863,25.214,28.041,27.281Z"
+                              transform="translate(0.005 -2.238)"
+                              fill="#6c63ff"
+                            />
+                          </svg>
+                        </a>
+                      ) : null}
                       {teamMember.socials.github ? (
                         <a href={teamMember.socials.github}>
                           <svg
@@ -128,17 +147,13 @@ export default function Team() {
                             />
                           </svg>
                         </a>
-                      ) : (
-                        ""
-                      )}
+                      ) : null}
                     </div>
                   </div>
                 </div>
-                <img
-                  alt="ecommerce"
-                  className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                  src={teamMember.image}
-                />
+                <div className="hidden sm:contents lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded">
+                  <img alt="ecommerce" src={teamMember.image} />
+                </div>
               </div>
             </div>
           </div>

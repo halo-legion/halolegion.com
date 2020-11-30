@@ -42,13 +42,13 @@ export default function Home() {
             </div>
             <div className="text-center lg:w-2/3 w-full">
               <h1
-                className="text-2xl mb-4 font-black text-primaryIndigo font-inter"
+                className="text-5xl sm:text-8xl mb-4 font-black text-primaryIndigo font-inter"
               >
                 Don't do it alone, do it with a legion, Halo.
               </h1>
               <div className="flex justify-center">
                 <p
-                  className="my-8 md:w-1/2 break-words leading-relaxed text-lg font-medium font-display"
+                  className="my-6 break-words leading-relaxed text-lg font-medium font-display sm:w-1/2"
                 >
                   Halo is the official technology club of DPS Indore. Besides
                   that, we just hang around and try putting things together.
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
         </section>
       </Parallax>
-      <div className="flex">
+    <div className="flex hidden sm:contents">
         <Parallax speed={6}>
           <div className="hero__circle_two">
             <svg
@@ -125,10 +125,10 @@ export default function Home() {
           </svg>
         </div>
       </div>
-      <section id="hero__content-block" className="p-32">
+      <section id="hero__content-block" className="sm:p-32">
         <div className="container px-5 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-            <h1 className="hero__content-block--title font-vg5000 text-center my-12">
+            <h1 className="sm:text-5xl text-4xl leading-loose font-vg5000 text-center my-12">
               Definitely more than a{" "}
               <span className="bg-yellow-300 p-1"> high school club </span>.
             </h1>
@@ -188,25 +188,25 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-32">
+      <section className="sm:px-32">
         <div className="register__card container px-5 mx-auto">
           <div className="flex justify-center">
-            <div className="register__card--graybox h-96 rounded-3xl"></div>
+            <div className="register__card--graybox h-96 sm:w-3/5 w-4/5 rounded-3xl"></div>
           </div>
           <div className="flex justify-center">
-            <div className="register__card--pinkbox h-96 rounded-3xl shadow-2xl">
+            <div className="register__card--pinkbox h-96 sm:w-4/5 w-full rounded-3xl shadow-2xl">
               <div className="register__card__content w-full h-full flex justify-center items-center flex-col">
-                <h1 className="text-white font-inter text-4xl font-extrabold">
+                <h1 className="text-white font-inter text-xl pt-4 sm:text-4xl font-extrabold">
                   Do you have what it takes?
                 </h1>
-                <p className="text-white m-6" style={{ width: "60%" }}>
+                <p className="text-white m-6 sm:w-3/5 w-4/5 text-md">
                   We are looking for like-minded individuals to make this legion
                   stronger. Do you think you have it in you? Register for our
                   annual inductions or{" "}
                   <span className="font-black">get more information</span> about
                   it.
                 </p>
-                <button className="register__card__button bg-white text-black font-inter font-extrabold py-6 px-24 rounded inline-flex items-center focus:outline-none border-4 border-dashed border-primary shadow-lg hover:shadow-2xl">
+                <button className="register__card__button bg-white text-black font-inter font-extrabold py-4 px-12 sm:py-6 sm:px-24 rounded inline-flex items-center focus:outline-none border-4 border-dashed border-primary shadow-lg hover:shadow-2xl">
                   <div className="mr-12">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -232,9 +232,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="team" className="team__section px-32 py-24 my-20 bg-primary">
+      <section id="team" className="team__section px-16 pt-12 pb-4 sm:px-32 sm:pt-24 sm:pb-20 my-20 bg-primary">
         <div className="flex justify-center items-center flex-col">
-          <h1 className="team__section_title text-white font-bold text-inter uppercase text-5xl">
+          <h1 className="team__section_title text-white font-bold text-inter uppercase text-2xl sm:text-5xl">
             The team
           </h1>
           <p className="team__section_description text-white font-medium text-opensans text-lg my-6">

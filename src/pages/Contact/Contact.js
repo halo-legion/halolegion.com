@@ -13,10 +13,7 @@ export default function Contact() {
         <section className="hero__bg">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
             <div className="text-center lg:w-2/3 w-full">
-              <h1
-                className="animated__highlight w-128 sm:text-5xl mb-4 font-black text-primaryIndigo font-inter"
-                style={{ fontSize: 90 }}
-              >
+              <h1 className="animated__highlight text-3xl sm:text-8xl mb-4 font-black text-primaryIndigo font-inter">
                 Interested in talking? Contact us here.
               </h1>
               <div className="flex justify-center my-24">
@@ -27,7 +24,7 @@ export default function Contact() {
             </div>
           </div>
         </section>
-        <div className="flex">
+        <div className="hidden sm:contents flex">
           <Parallax speed={6}>
             <div className="hero__hexagon">
               <svg
@@ -88,12 +85,12 @@ export default function Contact() {
           </div>
         </div>
       </Parallax>
-      <section id="hero__content-block" className="px-32">
+      <section id="hero__content-block" className="sm:px-32 -mt-24">
         <div className="container px-5 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap justify-center">
-            <h1 className="hero__content-block--title font-vg5000 text-center">
+            <h1 className="sm:text-5xl text-2xl leading-loose font-vg5000 text-center">
               We'd love to talk about stuff and
-              <span className="bg-yellow-300 px-1 m-1"> memes </span>.
+              <span className="bg-yellow-300 px-1 m-1">memes</span>.
             </h1>
           </div>
         </div>

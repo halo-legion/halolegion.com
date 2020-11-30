@@ -14,10 +14,7 @@ export default function Philosophy() {
         <section className="hero__bg">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
             <div className="text-center lg:w-2/3 w-full">
-              <h1
-                className="animated__highlight w-128 sm:text-5xl mb-4 font-black text-primaryIndigo font-inter"
-                style={{ fontSize: 90 }}
-              >
+              <h1 className="animated__highlight text-3xl sm:text-8xl mb-4 font-black text-primaryIndigo font-inter">
                 Our philosophy is what makes us a legion.
               </h1>
               <div className="flex justify-center my-24">
@@ -28,7 +25,7 @@ export default function Philosophy() {
             </div>
           </div>
         </section>
-        <div className="flex">
+        <div className="hidden sm:contents flex">
           <Parallax speed={6}>
             <div className="hero__hexagon">
               <svg
@@ -89,14 +86,14 @@ export default function Philosophy() {
           </div>
         </div>
       </Parallax>
-      <section id="hero__content-block" className="px-32">
+      <section id="hero__content-block" className="sm:px-32 -mt-24">
         <div className="container px-5 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap justify-center">
-            <h1 className="hero__content-block--title font-vg5000 text-center">
+            <h1 className="sm:text-5xl text-2xl font-vg5000 text-center">
               We are at our best when we are
-              <span className="bg-yellow-300 px-1 m-1"> together </span>.
+              <span className="bg-yellow-300 px-1 m-1">together</span>.
             </h1>
-            <div className="philosophy__cards my-8">
+            <div className="philosophy__cards sm:my-8">
               {philosophyData.map((philosophyCard) => (
                 <Card data={philosophyCard} key={philosophyCard.name} />
               ))}
@@ -104,12 +101,12 @@ export default function Philosophy() {
           </div>
         </div>
       </section>
-      <section className="hero__quote-block bg-primary p-32">
+      <section className="hero__quote-block bg-primary sm:p-32 p-8">
         <div className="flex justify-center align-center flex-col">
-          <h1 className="text-center font-vg5000 text-4xl text-white">
+          <h1 className="text-center font-vg5000 text-xl sm:text-4xl text-white">
             ~ Kutteshna kutteshna kutteshna kutteshna kutteshna kutteshna. ~
           </h1>
-          <p className="text-white text-center text-white font-vg5000 text-2xl pt-6">
+          <p className="text-white text-center text-white font-vg5000 text-lg sm:text-2xl pt-6">
             ~ Utkarsh the son of God
           </p>
         </div>
