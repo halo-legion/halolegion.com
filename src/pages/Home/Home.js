@@ -52,7 +52,7 @@ export default function Home() {
                   className="my-6 break-words leading-relaxed text-lg font-medium font-display"
                   style={{ width: "35rem" }}
                 >
-                  Halo is the official technology club of DPS Indore. Besides
+                  Halolegion is the official technology club of DPS Indore. Besides
                   that, we just hang around and try putting shit together.
                 </p>
               </div>
