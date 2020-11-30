@@ -24,7 +24,7 @@
     "build": "npm run build:css & react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/app.css & echo $NODE_ENV",
+    "build:css": "cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/app.css",
     "watch:css": "postcss src/styles/tailwind.css -o src/styles/app.css",
     "watch:nodemon": "nodemon --watch src/styles/tailwind.css --exec \"npm run build:css \""
   },
