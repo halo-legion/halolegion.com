@@ -8,7 +8,7 @@ I am 16 and Founder at Auxin. I develop meaningful experiences on the Web, Mobil
 
 When I'm not writing code, I enjoy writing stories on Medium, poems, articles, and research papers while also swimming to keep my body in sync. I am interested in fields such as Science and want to know more about them. I'm looking to pursue my undergrad in CS and Philosophy.
 `,
-    image: "https://dummyimage.com/400x400",
+    image: "https://avatars1.githubusercontent.com/u/29272078?s=400&u=aa102b90cf4c20a95ba8567839c13b652aece3ca&v=4",
     socials: {
       instagram: "https://www.instagram.com/youteakay/",
       twitter: "https://twitter.com",
