@@ -104,10 +104,10 @@ export default function Philosophy() {
       <section className="hero__quote-block bg-primary sm:p-32 p-8">
         <div className="flex justify-center align-center flex-col">
           <h1 className="text-center font-vg5000 text-xl sm:text-4xl text-white">
-            ~ Kutteshna kutteshna kutteshna kutteshna kutteshna kutteshna. ~
+          Either she froze time, met and married the man of her dreams, unfroze time, and hopped back on to vid chat with you, or... you're the dogface. Which do you think it is? I'm on the fence.
           </h1>
           <p className="text-white text-center text-white font-vg5000 text-lg sm:text-2xl pt-6">
-            ~ Utkarsh the son of God
+            ~ Gilfoyle
           </p>
         </div>
       </section>
