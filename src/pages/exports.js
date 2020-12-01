@@ -6,4 +6,6 @@ const Contact = lazy(() => import("./Contact/Contact"));
 const Join = lazy(() => import("./Join/Join"));
 const Legal = lazy(() => import("./Legal/Legal"));
 const Dashboard = lazy(() => import("./Dashboard/Dashboard"));
-export { Home, Philosophy, Contact, Join, Legal, Dashboard };
+const Resources = lazy(() => import("./Resources/Resources"));
+
+export { Home, Philosophy, Contact, Join, Legal, Dashboard, Resources };

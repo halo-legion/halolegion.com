@@ -15,4 +15,8 @@ export const links = [
     name: "Team",
     src: "/#team",
   },
+  {
+    name: "Learning Resources",
+    src: "/resources",
+  }
 ];

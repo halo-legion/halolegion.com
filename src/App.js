@@ -7,6 +7,7 @@ import {
   Join,
   Legal,
   Dashboard,
+  Resources
 } from "./pages/exports";
 import { ToastContainer } from "react-toastify";
 import "./styles/app.css";
@@ -31,6 +32,7 @@ function App() {
       <Router>
         <Suspense fallback={<Loading />}>
           <Switch>
+            <Route exact path="/resources" component={Resources} />
             <Route exact path="/legal" component={Legal} />
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/join" component={Join} />
