@@ -151,7 +151,7 @@ export default function Team() {
                     </div>
                   </div>
                 </div>
-                <div className="hidden sm:contents lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded">
+                <div className="hidden sm:contents lg:w-1/2 w-64 lg:h-1/2 h-64 object-cover object-center rounded">
                   <img alt="ecommerce" src={teamMember.image} />
                 </div>
               </div>
