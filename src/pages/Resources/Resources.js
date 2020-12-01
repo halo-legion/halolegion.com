@@ -39,7 +39,12 @@ export default function Resources() {
           <h1 className="sm:text-5xl text-3xl font-bold">Links</h1>
           <div className="text-2xl flex flex-col space-y-1 font-vg5000 py-4 underline">
             {links.map((link) => (
-              <a href={link.url} key={link.name}>
+              <a
+                href={link.src}
+                key={link.name}
+                rel="noreferrer"
+                target="_blank"
+              >
                 {link.name}
               </a>
             ))}
