@@ -21,7 +21,7 @@ When I'm not writing code, I enjoy writing stories on Medium, poems, articles, a
     description: `I’m an enthusiastic writer and am looking forward to working on the Halo magazine along with being the Head of Writing/Pitching. I strive to improve myself every day by exploring new concepts and reflecting on myself. When I’m not pitching new ideas, I love to read and cook.
 I'm interested in pursuing a deeper knowledge of behavioral economics, computer science, and business.
 Currently, I’m a content writer at an economics club, doing research on behavioral economics, working with the local government hospital, indulging in various competitions, and trying to keep up with my studies.`,
-    image: "blob:https://imgur.com/31e43c20-0f3a-47a9-b96a-a3260329564c",
+    image: "https://i.imgur.com/3gGaDOj.png",
     socials: {
       instagram: "https://www.instagram.com/__udeshna__/",
       twitter: "https://twitter.com",
