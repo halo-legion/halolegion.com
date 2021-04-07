@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { teamMembers } from "../team-members";
+//import { teamMembers } from "../team-members";
 
 export default function Team() {
-  const [index, setIndex] = useState(0);
+ /* const [index, setIndex] = useState(0);
   const length = teamMembers.length;
 
   const teamMember = teamMembers[index];
@@ -30,6 +30,7 @@ export default function Team() {
 
     setIndex(nIndex);
   };
+  */
   return (
     <div className="w-full">
       <h1>Error fetching resources</h1>
